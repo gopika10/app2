@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-two",
+            "outputPath": "dist/app2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -121,6 +121,41 @@
             "production": {
               "devServerTarget": "app-two:serve:production"
             }
+          }
+        }
+      }
+    },
+    "AppTwo": {
+      "projectType": "library",
+      "root": "projects/app-two",
+      "sourceRoot": "projects/app-two/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/app-two/tsconfig.lib.json",
+            "project": "projects/app-two/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-two/src/test.ts",
+            "tsConfig": "projects/app-two/tsconfig.spec.json",
+            "karmaConfig": "projects/app-two/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-two/tsconfig.lib.json",
+              "projects/app-two/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

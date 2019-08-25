@@ -1,0 +1,14 @@
+{
+  "name": "app-two",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  },
+  "author": "gopika10",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gopika10/app2.git"
+  },
+  "license": "MIT"
+}
