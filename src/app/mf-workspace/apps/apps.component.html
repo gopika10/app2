@@ -1,0 +1,17 @@
+<ngb-tabset>
+  <ngb-tab>
+    <ng-template ngbTabTitle>
+      <a routerLink="/apps">Apps</a>
+    </ng-template>
+    <ng-template ngbTabContent>
+      <ul>
+        <li *ngFor="let app of apps">
+          <div>
+            <h5><a routerLink="/apps/{{app.appId}}">{{app.name}}</a></h5>
+            <span>{{app.description}}</span>
+          </div>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

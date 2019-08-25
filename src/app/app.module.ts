@@ -4,18 +4,25 @@ import {Injector, NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {MfWorkspaceComponent} from './mf-workspace/mf-workspace.component';
 import {createCustomElement} from '@angular/elements';
+import {AppsComponent} from './mf-workspace/apps/apps.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.component';
 
 @NgModule({
   declarations: [
-    MfWorkspaceComponent
+    MfWorkspaceComponent,
+    AppsComponent,
+    AppDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   exports: [
-    MfWorkspaceComponent
+    MfWorkspaceComponent,
+    AppsComponent
   ],
   bootstrap: [MfWorkspaceComponent]
 })
