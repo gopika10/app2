@@ -2,12 +2,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
-import {AppTwoComponent} from './app-two/app-two.component';
+import {MfWorkspaceComponent} from './mf-workspace/mf-workspace.component';
 import {createCustomElement} from '@angular/elements';
 
 @NgModule({
   declarations: [
-    AppTwoComponent
+    MfWorkspaceComponent
   ],
   imports: [
     BrowserModule,
@@ -15,14 +15,14 @@ import {createCustomElement} from '@angular/elements';
   ],
   providers: [],
   exports: [
-    AppTwoComponent
+    MfWorkspaceComponent
   ],
-  bootstrap: [AppTwoComponent]
+  bootstrap: [MfWorkspaceComponent]
 })
-export class AppTwoModule {
+export class MfWorkspaceModule {
   constructor(private injector: Injector) {
-    const app2 = createCustomElement(AppTwoComponent, {injector});
-    customElements.define('app-two', app2);
+    const mfWorkspace = createCustomElement(MfWorkspaceComponent, {injector});
+    customElements.define('mf-workspace', mfWorkspace);
   }
 
 }

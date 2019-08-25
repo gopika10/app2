@@ -19,11 +19,13 @@
       "dom"
     ],
     "paths": {
-      "app-two": [
-        "dist/app-two"
+      "mf-workspace": [
+        "dist/mf-workspace",
+        "dist/mf-workspace"
       ],
-      "app-two/*": [
-        "dist/app-two/*"
+      "mf-workspace/*": [
+        "dist/mf-workspace/*",
+        "dist/mf-workspace/*"
       ]
     }
   },
