@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {MfWorkspaceComponent} from './mf-workspace/mf-workspace.component';
 import {createCustomElement} from '@angular/elements';
 import {AppsComponent} from './mf-workspace/apps/apps.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.component';
 
 @NgModule({
@@ -16,8 +15,7 @@ import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule
+    AppRoutingModule
   ],
   providers: [],
   exports: [
