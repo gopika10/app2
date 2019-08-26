@@ -22,7 +22,8 @@ import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.comp
   providers: [],
   exports: [
     MfWorkspaceComponent,
-    AppsComponent
+    AppsComponent,
+    AppDetailComponent
   ],
   bootstrap: [MfWorkspaceComponent]
 })
