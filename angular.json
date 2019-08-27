@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mf-workspace": {
+    "mf-apps": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mf-workspace",
+            "outputPath": "dist/mf-apps",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mf-workspace:build"
+            "browserTarget": "mf-apps:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mf-workspace:build:production"
+              "browserTarget": "mf-apps:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mf-workspace:build"
+            "browserTarget": "mf-apps:build"
           }
         },
         "test": {
@@ -115,51 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mf-workspace:serve"
+            "devServerTarget": "mf-apps:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mf-workspace:serve:production"
+              "devServerTarget": "mf-apps:serve:production"
             }
-          }
-        }
-      }
-    },
-    "MfWorkspace": {
-      "projectType": "library",
-      "root": "projects/mf-workspace",
-      "sourceRoot": "projects/mf-workspace/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/mf-workspace/tsconfig.lib.json",
-            "project": "projects/mf-workspace/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/mf-workspace/src/test.ts",
-            "tsConfig": "projects/mf-workspace/tsconfig.spec.json",
-            "karmaConfig": "projects/mf-workspace/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/mf-workspace/tsconfig.lib.json",
-              "projects/mf-workspace/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
     }
   },
-  "defaultProject": "mf-workspace"
+  "defaultProject": "mf-apps"
 }

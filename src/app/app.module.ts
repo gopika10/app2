@@ -2,14 +2,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
-import {MfWorkspaceComponent} from './mf-workspace/mf-workspace.component';
+import {MfAppsComponent} from './mf-apps/mf-apps.component';
 import {createCustomElement} from '@angular/elements';
-import {AppsComponent} from './mf-workspace/apps/apps.component';
-import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.component';
+import {AppsComponent} from './mf-apps/apps/apps.component';
+import {AppDetailComponent} from './mf-apps/apps/app-detail/app-detail.component';
 
 @NgModule({
   declarations: [
-    MfWorkspaceComponent,
+    MfAppsComponent,
     AppsComponent,
     AppDetailComponent
   ],
@@ -19,16 +19,16 @@ import {AppDetailComponent} from './mf-workspace/apps/app-detail/app-detail.comp
   ],
   providers: [],
   exports: [
-    MfWorkspaceComponent,
+    MfAppsComponent,
     AppsComponent,
     AppDetailComponent
   ],
-  bootstrap: [MfWorkspaceComponent]
+  bootstrap: [MfAppsComponent]
 })
-export class MfWorkspaceModule {
+export class MfAppsModule {
   constructor(private injector: Injector) {
-    const mfWorkspace = createCustomElement(MfWorkspaceComponent, {injector});
-    customElements.define('mf-workspace', mfWorkspace);
+    const mfWorkspace = createCustomElement(MfAppsComponent, {injector});
+    customElements.define('mf-apps', mfWorkspace);
   }
 
 }
